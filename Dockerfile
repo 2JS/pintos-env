@@ -29,6 +29,8 @@ RUN apt-get install -y libcurl3 libpixman-1-0 libpng12-0 libjpeg62 libglib2.0-0 
 COPY --from=QEMUBUILD /root/qemu/build/x86_64-softmmu/qemu-system-x86_64 /usr/local/bin/
 COPY --from=QEMUBUILD /root/qemu/pc-bios /usr/local/share/qemu/
 
+WORKDIR /root/pintos
+
 
 FROM alpine:3.12.0 AS gccbuild
 
