@@ -44,7 +44,9 @@ Use `make -j`, or `make -j8` for 8 parallel compiler threads. You can get more t
 > sys	0m12.912s
 > ```
 >
-> Tested on Mac Pro 2013, 3.5 GHz 6-Core "Ivy Bridge-EP" Intel Xeon (E5-1650 v2) with 12 MB L3 cache, 16 GB DDR3 ECC at 1866 MHz
+> Project 3 VM Build, Tested on Mac Pro 2013, 3.5 GHz 6-Core "Ivy Bridge-EP" Intel Xeon (E5-1650 v2) with 12 MB L3 cache, 16 GB DDR3 ECC at 1866 MHz
+
+Same option can be applied to `make check`. However, running too many qemus may harm performance and cause memory shortage, therefore use `-j6`~`-j12` is appropriate.
 
 ## Future improvements
 
