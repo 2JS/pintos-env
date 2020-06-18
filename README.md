@@ -22,6 +22,10 @@ This docker image is based on Ubuntu 16.04 Xenial, includes QEMU 2.5.0 and GCC 7
 2. Go to your pintos project directory that directly includes `threads` directory.
 3. `docker run -it --rm -v $(cd):/root/pintos lego3410/pintos`
 
+## No Guarantee
+
+Even though this image imitates most of actual build environment, tests may pass but it does not guarantee that it will be on server. Before final submission, be sure to test it on server more than once.
+
 ## Simple irrelevant Tip
 
 You may use `-j` option within `make` to enable parallel compiling.
