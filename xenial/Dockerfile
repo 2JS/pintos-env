@@ -24,9 +24,12 @@ RUN apt-get install -y software-properties-common \
  && apt install g++-7 -y \
  && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 60 --slave /usr/bin/g++ g++ /usr/bin/g++-7
 
-RUN apt-get install -y libcurl3 libpixman-1-0 libpng12-0 libjpeg62 libglib2.0-0 make
+RUN apt-get install -y \
+    libcurl3 libpixman-1-0 libpng12-0 libjpeg62 libglib2.0-0 \
+    make gdb
 
 COPY --from=QEMUBUILD /root/qemu/build/x86_64-softmmu/qemu-system-x86_64 /usr/local/bin/
 COPY --from=QEMUBUILD /root/qemu/pc-bios /usr/local/share/qemu/
 
 WORKDIR /root/pintos
+ENV PATH="$PATH:/root/pintos/utils"
