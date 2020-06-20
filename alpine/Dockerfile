@@ -18,7 +18,7 @@ RUN ../configure --target-list=x86_64-softmmu --enable-debug --iasl=musl-gcc --e
 
 FROM alpine:3.12.0 as alpine
 
-RUN apk update && apk add --no-cache gcc6 make python3 perl bash
+RUN apk update && apk add --no-cache gcc6 make python3 perl
 RUN ln -s /usr/bin/gcc-6 /usr/bin/gcc
 
 COPY --from=QEMUBUILD /root/qemu/build/x86_64-softmmu/qemu-system-x86_64 /usr/local/bin/
@@ -27,4 +27,4 @@ COPY --from=QEMUBUILD /root/qemu/pc-bios /usr/local/share/qemu/
 WORKDIR /root/pintos
 ENV PATH="$PATH:/root/pintos/utils"
 
-CMD ["/bin/bash"]
+#CMD ["/bin/bash"]
