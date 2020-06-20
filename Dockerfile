@@ -30,14 +30,3 @@ COPY --from=QEMUBUILD /root/qemu/build/x86_64-softmmu/qemu-system-x86_64 /usr/lo
 COPY --from=QEMUBUILD /root/qemu/pc-bios /usr/local/share/qemu/
 
 WORKDIR /root/pintos
-
-
-FROM alpine:3.12.0 AS gccbuild
-
-
-FROM alpine:3.12.0 AS alpine
-
-RUN apk update && apk add --no-cache make build-base
-
-COPY --from=QEMUBUILD /root/qemu/build/x86_64-softmmu/qemu-system-x86_64 /usr/local/bin/
-COPY --from=QEMUBUILD /root/qemu/pc-bios /usr/local/share/qemu/
