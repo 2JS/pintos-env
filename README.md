@@ -6,7 +6,7 @@ This docker image is based on Ubuntu 16.04 Xenial, includes QEMU 2.5.0 and GCC 7
 
 ## Tags
 
-* `latest`, `xenial-qemu2.5.0-gcc7.5.0`
+* `latest`, `xenial`
 
 ## Getting started
 
