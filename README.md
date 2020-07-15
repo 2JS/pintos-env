@@ -26,6 +26,10 @@ This docker image is based on Ubuntu 16.04 Xenial, includes QEMU 2.5.0 and GCC 7
 
 Even though this image imitates most of actual build environment, tests may pass but it does not guarantee that it will be on server. Before final submission, be sure to test it on server more than once.
 
+## Issue Reporting
+
+Whenever any relevant trouble occurs, or any improvement idea comes into your mind, feel free to [report issue](https://github.com/2JS/pintos-env/issues/new/choose).
+
 ## Simple irrelevant Tip
 
 You may use `-j` option within `make` to enable parallel compiling.
