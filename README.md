@@ -14,7 +14,7 @@ This docker image is based on Ubuntu 16.04 Xenial, includes QEMU 2.5.0 and GCC 7
 
 1. Open `Terminal.app`
 2. Go to your pintos project directory that directly includes `threads` directory.
-3. `sudo docker run -it --rm -v "$(pwd)":/root/pintos lego3410/pintos`
+3. `./run.sh`
 4. Now you have linux shell with pintos build/debug dependencies.
 
 ### For Windows
