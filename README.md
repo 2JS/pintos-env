@@ -8,6 +8,12 @@ This docker image is based on Ubuntu 16.04 Xenial, includes QEMU 2.5.0 and GCC 7
 
 * `latest`, `xenial`
 
+## Requirement
+
+* [Docker](https://www.docker.com)
+
+All you need is Docker. That's what this project is for. Once you uninstall Docker, nothing will left on your machine.
+
 ## Usage
 
 ### For macOS/Linux
@@ -24,7 +30,7 @@ This docker image is based on Ubuntu 16.04 Xenial, includes QEMU 2.5.0 and GCC 7
 3. `docker run -it --rm -v "$(cd)":/root/pintos lego3410/pintos`
 4. Now you have linux shell with pintos build/debug dependencies.
 
-**Note**: Not properly tested on windows. Please create issue if there is any trouble.
+**Note**: Not tested enough on windows. Please create issue if there is any trouble.
 
 ## No Guarantee
 
